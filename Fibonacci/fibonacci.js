@@ -2,3 +2,26 @@
 
 IMPORTANTE:
 Esse número pode ser informado através de qualquer entrada de sua preferência ou pode ser previamente definido no código; */
+
+let numeroDesejado = parseInt(prompt()) ;
+let fibonacci = [0,1];
+let count = 0;
+
+while(fibonacci[count] < numeroDesejado){
+    let x = fibonacci[count] + fibonacci[count + 1];
+    fibonacci.push(x);
+    count++
+}
+
+let contem = false;
+fibonacci.forEach(element => {
+    if(element === numeroDesejado){
+        contem = true
+    }
+});
+
+if(contem){
+    console.log("O número pertence a sequencia");
+} else {
+    console.log("O número não pertence a sequencia");
+}
